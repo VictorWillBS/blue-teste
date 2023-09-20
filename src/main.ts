@@ -1,5 +1,9 @@
 import { createApp } from 'vue'
-import './style.css'
+import './styles/general.css'
 import App from './App.vue'
-
-createApp(App).mount('#app')
+import dayjs from "dayjs"
+import ptbr from 'dayjs/locale/pt-br'
+dayjs.locale(ptbr)
+//@ts-expect-error
+const app= createApp(App)
+app.mount('#app')
