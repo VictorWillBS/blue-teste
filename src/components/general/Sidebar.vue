@@ -29,7 +29,7 @@
 <script lang="ts">
 import ViewDashboard from 'vue-material-design-icons/ViewDashboard.vue';
 import Table from 'vue-material-design-icons/Table.vue';
-import MoneyBagIcon from "../../assets/icons/Money_bag.vue"
+import MoneyBagIcon from "../../assets/icons/MoneyBag.vue"
 export default {
   components: {
     ViewDashboard, Table, MoneyBagIcon
