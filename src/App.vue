@@ -1,22 +1,17 @@
 <script setup lang="ts">
+import Dashboard from './pages/Dashboard.vue';
+import Sidebar from './components/general/Sidebar.vue';
+import MainContainer from './components/general/MainContainer.vue';
 </script>
 
+
 <template>
+  <div class="bg-white-blue font-text-normal h-screen w-screen flex">
+    <Sidebar />
+    <MainContainer>
+      <Dashboard />
+    </MainContainer>
+  </div>
 </template>
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
-</style>
+<style scoped></style>
