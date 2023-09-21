@@ -1,7 +1,3 @@
-<script setup lang="ts">
-    import TopBar from "./TopBar.vue"
-    import Sidebar from "./Sidebar.vue"
-</script>
 <template lang="">
     <div
         class="relative flex min-h-screen w-screen overflow-y-auto bg-white-blue font-text-normal"
@@ -22,7 +18,11 @@
     </div>
 </template>
 <script lang="ts">
-    export default {
+    import TopBar from "./TopBar.vue"
+    import Sidebar from "./Sidebar.vue"
+    import { defineComponent } from "vue"
+    export default defineComponent({
+        components: { TopBar, Sidebar },
         data() {
             return {
                 mobileSidebarOpen: screen.width >= 1024,
@@ -34,6 +34,6 @@
                 return
             },
         },
-    }
+    })
 </script>
 <style lang=""></style>

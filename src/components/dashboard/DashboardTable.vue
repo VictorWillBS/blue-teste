@@ -61,7 +61,8 @@
 <script lang="ts">
     import { PropType } from "vue"
     import { IProposal } from "../../types/IProposal.ts"
-    export default {
+    import { defineComponent } from "vue"
+    export default defineComponent({
         props: {
             proposals: {
                 type: Array as PropType<IProposal[]>,
@@ -70,7 +71,7 @@
                 },
             },
         },
-    }
+    })
 </script>
 <style lang="postcss">
     tr {

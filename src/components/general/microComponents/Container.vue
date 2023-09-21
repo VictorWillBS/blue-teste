@@ -7,7 +7,8 @@
     </div>
 </template>
 <script lang="ts">
-    export default {
+    import { defineComponent } from "vue"
+    export default defineComponent({
         props: {
             customClass: {
                 type: String,
@@ -16,6 +17,9 @@
                 },
             },
         },
-    }
+        mounted() {
+            this.customClass // type: string | undefined
+        },
+    })
 </script>
 <style lang=""></style>

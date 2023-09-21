@@ -1,8 +1,5 @@
 <script setup lang="ts">
     import { onMounted } from "vue"
-    import ViewDashboard from "vue-material-design-icons/ViewDashboard.vue"
-    import MoneyBagIcon from "../../../public/icons/MoneyBag.vue"
-
     const emit = defineEmits(["updateSidebarVisibility"])
     onMounted(function () {
         window.addEventListener("resize", function () {
@@ -61,9 +58,15 @@
 </template>
 <script lang="ts">
     import Table from "vue-material-design-icons/Table.vue"
-
-    export default {
-        components: { TableIcon: Table },
+    import ViewDashboard from "vue-material-design-icons/ViewDashboard.vue"
+    import MoneyBagIcon from "../../../public/icons/MoneyBag.vue"
+    import { defineComponent } from "vue"
+    export default defineComponent({
+        components: {
+            TableIcon: Table as any,
+            ViewDashboard: ViewDashboard as any,
+            MoneyBagIcon,
+        },
         props: {
             mobileSidebarOpen: {
                 type: Boolean,
@@ -78,7 +81,7 @@
                 return
             },
         },
-    }
+    })
 </script>
 <style lang="css">
     .icon {

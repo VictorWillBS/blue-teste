@@ -1,7 +1,3 @@
-<script setup lang="ts">
-    import Container from "../general/microComponents/Container.vue"
-</script>
-
 <template lang="">
     <Container custom-class="self-start lg:h-fit max-w-xs w-full rounded-lg">
         <img
@@ -28,7 +24,10 @@
     </Container>
 </template>
 <script lang="ts">
-    export default {
+    import Container from "../general/microComponents/Container.vue"
+    import { defineComponent } from "vue"
+    export default defineComponent({
+        components: { Container },
         props: {
             title: {
                 type: String,
@@ -55,6 +54,6 @@
                 },
             },
         },
-    }
+    })
 </script>
 <style lang=""></style>

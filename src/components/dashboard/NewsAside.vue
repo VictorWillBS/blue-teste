@@ -1,7 +1,4 @@
-<script setup lang="ts">
-    import Container from "../general/microComponents/Container.vue"
-    import PhotoCard from "./PhotoCard.vue"
-</script>
+<script setup lang="ts"></script>
 <template lang="">
     <Container
         custom-class=" sm:container lg:w-1/4 w-full bg-white h-full px-4 py-5 flex flex-col  gap-y-3"
@@ -22,10 +19,13 @@
     </Container>
 </template>
 <script lang="ts">
+    import Container from "../general/microComponents/Container.vue"
+    import PhotoCard from "./PhotoCard.vue"
     import INews from "../../types/INews"
     import newsFactory from "../../utils/newsFactory"
-
-    export default {
+    import { defineComponent } from "vue"
+    export default defineComponent({
+        components: { Container, PhotoCard },
         data() {
             return {
                 updateNews: this.newsFactory(2) satisfies INews[],
@@ -34,6 +34,6 @@
         methods: {
             newsFactory,
         },
-    }
+    })
 </script>
 <style lang=""></style>

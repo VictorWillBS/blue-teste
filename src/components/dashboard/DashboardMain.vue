@@ -1,8 +1,3 @@
-<script setup lang="ts">
-    import Container from "../general/microComponents/Container.vue"
-    import Card from "./Card.vue"
-    import DashboardTable from "./DashboardTable.vue"
-</script>
 <template lang="">
     <Container class="h-full w-full shadow sm:container lg:me-4 lg:w-4/5">
         <section
@@ -24,9 +19,19 @@
     </Container>
 </template>
 <script lang="ts">
+    import Card from "./Card.vue"
+    import { defineComponent } from "vue"
+    import DashboardTable from "./DashboardTable.vue"
     import proposalFactory from "../../utils/proposalFactory.ts"
-    export default {
+    import Container from "../general/microComponents/Container.vue"
+
+    export default defineComponent({
+        components: {
+            Container,
+            Card,
+            DashboardTable,
+        },
         methods: { proposalFactory },
-    }
+    })
 </script>
 <style lang=""></style>

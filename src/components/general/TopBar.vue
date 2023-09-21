@@ -26,7 +26,7 @@
     import getTodayDateHumanized from "../../utils/getTodayDateHumanized"
 
     export default {
-        components: { MenuIcon: Menu },
+        components: { MenuIcon: Menu as any },
         props: {
             mobileSidebarOpen: {
                 type: Boolean,
