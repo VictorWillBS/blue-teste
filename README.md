@@ -4,7 +4,7 @@ Resposta do Desafio técnico da Blue.
 
 ### Deploy
 
-Acesse o deploy <a href="https://blue-teste-v2.vercel.app">clicando aqui</a>
+Acesse o deploy <a href="https://blue-dashboard-sigma.vercel.app">clicando aqui</a>
 
 ### Requisitos Cumpridos
 
@@ -25,7 +25,8 @@ Além disto é bom ter um editor para trabalhar com o código como [VSCode](http
 $ git clone <https://github.com/VictorWillBS/blue-teste/>
 
 # Acesse a pasta do projeto no terminal/cmd
-$ cd blue-teste-v2
+$ cd blue-teste
+
 
 # Instale as dependências
 $ npm install
