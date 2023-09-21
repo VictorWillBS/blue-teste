@@ -58,13 +58,13 @@
 </template>
 <script lang="ts">
     import Table from "vue-material-design-icons/Table.vue"
-    import ViewDashboard from "vue-material-design-icons/ViewDashboard.vue"
+    import ViewDashboardIcon from "vue-material-design-icons/ViewDashboard.vue"
     import MoneyBagIcon from "../../../public/icons/MoneyBag.vue"
     import { defineComponent } from "vue"
     export default defineComponent({
         components: {
             TableIcon: Table as any,
-            ViewDashboard: ViewDashboard as any,
+            ViewDashboard: ViewDashboardIcon as any,
             MoneyBagIcon,
         },
         props: {
