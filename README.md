@@ -4,7 +4,7 @@ Resposta do Desafio técnico da Blue.
 
 ### Deploy
 
-Acesse o deploy <a href="https://blue-dashboard-sigma.vercel.app">clicando aqui</a>
+Acesse o deploy <a href="https://blue-teste-v2.vercel.app">clicando aqui</a>
 
 ### Requisitos Cumpridos
 
