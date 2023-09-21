@@ -27,9 +27,9 @@
         name: "PayMoneyIcon",
         props: {
             size: {
-                type: String,
+                type: Number,
                 default() {
-                    return ""
+                    return 48
                 },
             },
             color: {
