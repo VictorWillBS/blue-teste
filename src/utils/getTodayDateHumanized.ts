@@ -1,4 +1,5 @@
 import dayjs from "dayjs"
+import {IMonth,IWeekdays} from "../types/IDateHumanized.ts"
 export default function getTodayDateHumanized() {
   const weekdayPtBr = {
     1: "Segunda",
@@ -8,7 +9,7 @@ export default function getTodayDateHumanized() {
     5: "Sexta",
     6: "Sábado",
     0: "Domingo",
-  }
+  }satisfies IWeekdays
   const MonthPtBr = {
     0: "Janeiro",
     1: "Fevereiro",
@@ -22,10 +23,10 @@ export default function getTodayDateHumanized() {
     9: "Outubro",
     10: "Novembro",
     11: "Dezembro",
-  }
+  } satisfies IMonth
   const weekday = dayjs().day()
   const month = dayjs().month()
-  const monthDay = dayjs().date()
+  const monthDay= dayjs().date()
   const year = dayjs().year()
-  return `${weekdayPtBr[weekday]}, ${monthDay} de ${MonthPtBr[month]} de ${year} `
+  return `${weekdayPtBr[weekday as keyof IWeekdays ]}, ${monthDay} de ${MonthPtBr[month as keyof IMonth]} de ${year} `
 }
