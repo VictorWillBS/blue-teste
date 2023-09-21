@@ -40,10 +40,7 @@
         },
         methods: {
             showMobileSidebar() {
-                console.log(this.mobileSidebarOpen)
                 this.$emit("updateSidebarVisibility", true)
-                console.log(this.mobileSidebarOpen)
-
                 return
             },
         },

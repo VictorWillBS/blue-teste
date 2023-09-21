@@ -74,10 +74,7 @@
         },
         methods: {
             hideMobile() {
-                console.log(this.mobileSidebarOpen)
                 this.$emit("updateSidebarVisibility", false)
-                console.log(this.mobileSidebarOpen)
-
                 return
             },
         },
