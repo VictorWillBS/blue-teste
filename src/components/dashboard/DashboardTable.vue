@@ -1,0 +1,80 @@
+<template lang="">
+    <h6 class="mb-4 px-14 text-lg font-bold text-black">Últimas Propostas</h6>
+    <div class="overflow-y-autp relative mb-3 max-h-96 overflow-x-auto">
+        <table class="w-full text-left text-sm text-gray-500">
+            <tbody>
+                <tr
+                    class="border-b bg-white"
+                    v-for="proposal in proposals"
+                    :key="proposal.code"
+                >
+                    <td>
+                        <div class="flex w-fit flex-col">
+                            <span class="w-fit text-xs font-bold text-black">
+                                {{ proposal.proposer }}
+                            </span>
+                            <span class="w-fit text-2xs text-gray-400">
+                                Cadastrada em {{ proposal.date }}</span
+                            >
+                        </div>
+                    </td>
+                    <td>
+                        <div class="flex w-fit flex-col">
+                            <span class="w-fit text-2xs text-gray-400">
+                                Localidade
+                            </span>
+                            <span class="w-fit text-xs font-bold text-black">
+                                {{ proposal.city }}
+                            </span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="flex w-fit flex-col">
+                            <span class="w-fit text-2xs text-gray-400">
+                                Telefone
+                            </span>
+                            <span class="w-fit text-xs font-bold text-black">
+                                {{ proposal.contact }}
+                            </span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="flex w-fit flex-col">
+                            <span class="w-fit text-2xs text-gray-400">
+                                Valor
+                            </span>
+                            <span class="w-fit text-xs font-bold text-black">
+                                {{
+                                    proposal.value.toLocaleString("pt-br", {
+                                        style: "currency",
+                                        currency: "BRL",
+                                    })
+                                }}
+                            </span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</template>
+<script lang="ts">
+    import { PropType } from "vue"
+    import { IProposal } from "../../types/IProposal.ts"
+    export default {
+        props: {
+            proposals: { type: Array as PropType<IProposal[]> },
+        },
+    }
+</script>
+<style lang="postcss">
+    tr {
+        text-wrap: nowrap;
+    }
+    td {
+        padding: 0.75rem 1rem;
+    }
+    tr:nth-child(even) {
+        @apply bg-gray-200;
+    }
+</style>
