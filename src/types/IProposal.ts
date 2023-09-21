@@ -1,7 +1,7 @@
 export interface IProposal{
-  code:String;
-  proposer:String;
-  city:String;
-  contact:String;
-  value:Number;
+  code:string;
+  proposer:string;
+  city:string;
+  contact:string;
+  value:number;
 }

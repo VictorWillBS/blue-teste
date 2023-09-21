@@ -1,6 +1,7 @@
 export default interface INews {
-  title: String;
-  imageUrl: String;
-  description: String;
-  link: String;
+  title: string;
+  imageUrl: string;
+  description: string;
+  link: string;
+  code: string;
 }
