@@ -22,10 +22,10 @@ Além disto é bom ter um editor para trabalhar com o código como [VSCode](http
 
 ```bash
 # Clone este repositório
-$ git clone <https://github.com/VictorWillBS/blue-teste/>
+$ git clone <https://github.com/VictorWillBS/blue-teste-v2/>
 
 # Acesse a pasta do projeto no terminal/cmd
-$ cd blue-teste
+$ cd blue-teste-v2
 
 
 # Instale as dependências
