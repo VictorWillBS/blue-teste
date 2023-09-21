@@ -21,7 +21,7 @@
         name: "MoneyBagIcon",
         props: {
             size: {
-                type: Number as number,
+                type: number,
                 default() {
                     return ""
                 },
