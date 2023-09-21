@@ -1,18 +1,39 @@
+<script setup lang="ts">
+    import TopBar from "./TopBar.vue"
+    import Sidebar from "./Sidebar.vue"
+</script>
 <template lang="">
-  <div class="w-full">
-    <Topbar/>
-    <slot></slot>
-  </div>
+    <div
+        class="relative flex min-h-screen w-screen overflow-y-auto bg-white-blue font-text-normal"
+    >
+        <Sidebar
+            :mobileSidebarOpen="mobileSidebarOpen"
+            @updateSidebarVisibility="updateSidebarVisibility"
+        />
+        <div
+            class="flex w-full flex-col items-center justify-start px-6 py-1 lg:ms-40"
+        >
+            <TopBar
+                :mobileSidebarOpen="mobileSidebarOpen"
+                @updateSidebarVisibility="updateSidebarVisibility"
+            />
+            <slot></slot>
+        </div>
+    </div>
 </template>
 <script lang="ts">
-import Topbar from './Topbar.vue';
-
-export default {
-  components: {
-    Topbar
-  }
-}
+    export default {
+        data() {
+            return {
+                mobileSidebarOpen: screen.width >= 1024,
+            }
+        },
+        methods: {
+            updateSidebarVisibility(isOpen: boolean) {
+                this.mobileSidebarOpen = isOpen
+                return
+            },
+        },
+    }
 </script>
-<style lang="">
-  
-</style>
+<style lang=""></style>
