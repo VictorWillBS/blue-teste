@@ -14,7 +14,7 @@
     <aside
         class="fixed left-0 top-0 z-10 flex h-full min-h-screen w-full lg:w-fit"
         :class="mobileSidebarOpen ? '' : 'hidden'"
-        tabindex="1"
+        tabindex="0"
     >
         <section class="h-full w-40 flex-none bg-white p-3 shadow lg:block">
             <article class="mb-20 flex w-full items-center justify-center">
