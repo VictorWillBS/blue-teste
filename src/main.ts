@@ -4,6 +4,5 @@ import App from './App.vue'
 import dayjs from "dayjs"
 import ptbr from 'dayjs/locale/pt-br'
 dayjs.locale(ptbr)
-//@ts-expect-error
-const app= createApp(App)
+const app = createApp(App)
 app.mount('#app')
