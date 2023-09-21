@@ -4,9 +4,9 @@
         <table class="w-full text-left text-sm text-gray-500">
             <tbody>
                 <tr
-                    class="border-b bg-white"
                     v-for="proposal in proposals"
                     :key="proposal.code"
+                    class="border-b bg-white"
                 >
                     <td>
                         <div class="flex w-fit flex-col">
@@ -63,7 +63,12 @@
     import { IProposal } from "../../types/IProposal.ts"
     export default {
         props: {
-            proposals: { type: Array as PropType<IProposal[]> },
+            proposals: {
+                type: Array as PropType<IProposal[]>,
+                default() {
+                    return []
+                },
+            },
         },
     }
 </script>

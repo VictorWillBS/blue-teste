@@ -12,9 +12,10 @@
         >
             <PhotoCard
                 v-for="update in updateNews"
+                :key="update.code"
                 :title="update.title"
                 :description="update.description"
-                :imageUrl="update.imageUrl"
+                :image-url="update.imageUrl"
                 :link="update.link"
             />
         </section>

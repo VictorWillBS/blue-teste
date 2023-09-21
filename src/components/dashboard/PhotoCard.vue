@@ -30,10 +30,30 @@
 <script lang="ts">
     export default {
         props: {
-            title: { type: String, default: "" },
-            description: { type: String, default: "" },
-            imageUrl: { type: String, default: "" },
-            link: { type: String, default: "" },
+            title: {
+                type: String,
+                default() {
+                    return ""
+                },
+            },
+            description: {
+                type: String,
+                default() {
+                    return ""
+                },
+            },
+            imageUrl: {
+                type: String,
+                default() {
+                    return ""
+                },
+            },
+            link: {
+                type: String,
+                default() {
+                    return ""
+                },
+            },
         },
     }
 </script>

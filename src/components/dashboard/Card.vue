@@ -17,20 +17,38 @@
     </Container>
 </template>
 <script lang="ts">
+    import { PropType } from "vue"
+    type Type = "proposes" | "gain" | "default"
     export default {
         props: {
-            value: { type: String, default: "" },
-            title: { type: String, default: "" },
-            type: { type: String, default: "" },
+            value: {
+                type: String,
+                default() {
+                    return ""
+                },
+            },
+            title: {
+                type: String,
+                default() {
+                    return ""
+                },
+            },
+            type: {
+                type: String as PropType<Type>,
+                default() {
+                    return "default"
+                },
+            },
         },
         methods: {
-            getBg(): any {
+            getBg() {
                 const types = {
                     proposes: "bg-black",
                     gain: "bg-neutral-500",
+                    default: "bg-blue",
                 }
 
-                return types[this.type] || "bg-blue"
+                return types[this.type]
             },
         },
     }

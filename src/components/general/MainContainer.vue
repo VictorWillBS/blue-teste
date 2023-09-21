@@ -7,14 +7,14 @@
         class="relative flex min-h-screen w-screen overflow-y-auto bg-white-blue font-text-normal"
     >
         <Sidebar
-            :mobileSidebarOpen="mobileSidebarOpen"
+            :mobile-sidebar-open="mobileSidebarOpen"
             @updateSidebarVisibility="updateSidebarVisibility"
         />
         <div
             class="flex w-full flex-col items-center justify-start px-6 py-1 lg:ms-40"
         >
             <TopBar
-                :mobileSidebarOpen="mobileSidebarOpen"
+                :mobile-sidebar-open="mobileSidebarOpen"
                 @updateSidebarVisibility="updateSidebarVisibility"
             />
             <slot></slot>

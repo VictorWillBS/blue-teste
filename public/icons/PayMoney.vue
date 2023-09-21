@@ -26,10 +26,30 @@
     export default {
         name: "PayMoneyIcon",
         props: {
-            size: { type: String, default: "" },
-            color: { type: String, default: "currentColor" },
-            fillOpacity: { type: String, default: "0.1" },
-            bgFillOpacity: { type: String, default: "0" },
+            size: {
+                type: String,
+                default() {
+                    return ""
+                },
+            },
+            color: {
+                type: String,
+                default() {
+                    return "currentColor"
+                },
+            },
+            fillOpacity: {
+                type: String,
+                default() {
+                    return "0.1"
+                },
+            },
+            bgFillOpacity: {
+                type: String,
+                default() {
+                    return "0"
+                },
+            },
         },
         data() {
             return {

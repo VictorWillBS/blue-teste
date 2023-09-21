@@ -12,14 +12,12 @@
 </script>
 <template>
     <aside
-        class="absolute left-0 top-0 z-10 flex h-full min-h-screen w-full lg:w-fit"
+        class="fixed left-0 top-0 z-10 flex h-full min-h-screen w-full lg:w-fit"
         :class="mobileSidebarOpen ? '' : 'hidden'"
+        tabindex="1"
     >
         <section class="h-full w-40 flex-none bg-white p-3 shadow lg:block">
-            <article
-                class="mb-20 flex w-full items-center justify-center"
-                @click="hideMobile()"
-            >
+            <article class="mb-20 flex w-full items-center justify-center">
                 <img
                     src="../../assets/blue-logo.svg"
                     class="w-25 h-8"
@@ -56,7 +54,7 @@
             </section>
         </section>
         <div
-            class="w-full bg-black bg-opacity-5 lg:hidden"
+            class="w-full bg-black bg-opacity-30 lg:hidden"
             @click="hideMobile()"
         ></div>
     </aside>
@@ -65,8 +63,15 @@
     import Table from "vue-material-design-icons/Table.vue"
 
     export default {
-        props: ["mobileSidebarOpen"],
         components: { TableIcon: Table },
+        props: {
+            mobileSidebarOpen: {
+                type: Boolean,
+                default() {
+                    return screen.width >= 1024
+                },
+            },
+        },
         methods: {
             hideMobile() {
                 console.log(this.mobileSidebarOpen)

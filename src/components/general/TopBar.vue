@@ -27,10 +27,17 @@
 
     export default {
         components: { MenuIcon: Menu },
+        props: {
+            mobileSidebarOpen: {
+                type: Boolean,
+                default() {
+                    return screen.width >= 1024
+                },
+            },
+        },
         data() {
             return { date: getTodayDateHumanized() }
         },
-        props: { mobileSidebarOpen: Boolean },
         methods: {
             showMobileSidebar() {
                 console.log(this.mobileSidebarOpen)

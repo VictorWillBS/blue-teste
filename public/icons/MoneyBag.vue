@@ -20,8 +20,18 @@
     export default {
         name: "MoneyBagIcon",
         props: {
-            size: { type: Number, default: "" },
-            color: { type: String, default: "currentColor" },
+            size: {
+                type: Number as number,
+                default() {
+                    return ""
+                },
+            },
+            color: {
+                type: String,
+                default() {
+                    return "currentColor"
+                },
+            },
         },
     }
 </script>

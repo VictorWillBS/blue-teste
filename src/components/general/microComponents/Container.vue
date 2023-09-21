@@ -9,7 +9,12 @@
 <script lang="ts">
     export default {
         props: {
-            customClass: { type: String, default: "bg-white" },
+            customClass: {
+                type: String,
+                default() {
+                    return "bg-white"
+                },
+            },
         },
     }
 </script>
