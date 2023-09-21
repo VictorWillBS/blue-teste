@@ -18,7 +18,6 @@
 </template>
 <script lang="ts">
     export default {
-        name: "MoneyBagIcon",
         props: {
             size: {
                 type: Number,
