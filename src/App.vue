@@ -1,17 +1,14 @@
 <script setup lang="ts">
-import Dashboard from './pages/Dashboard.vue';
-import Sidebar from './components/general/Sidebar.vue';
-import MainContainer from './components/general/MainContainer.vue';
+    import Dashboard from "./pages/Dashboard.vue"
+    import MainContainer from "./components/general/MainContainer.vue"
+    import { provide } from "vue"
+    provide("mobileSidebarOpen", screen.width <= 640)
 </script>
 
-
 <template>
-  <div class="bg-white-blue font-text-normal h-screen w-screen flex">
-    <Sidebar />
     <MainContainer>
-      <Dashboard />
+        <Dashboard />
     </MainContainer>
-  </div>
 </template>
 
 <style scoped></style>
