@@ -9,7 +9,8 @@ export default function newsFactory(total: number): undefined | INews[] {
       description: faker.lorem.words(10),
       imageUrl: faker.image.url(),
       link: faker.internet.url(),
-      title: faker.commerce.productName()
+      title: faker.commerce.productName(),
+      code: faker.string.alphanumeric({ casing: 'upper', length: { min: 5, max: 10 } })
     } satisfies INews
     news.push(newUpdate)
   }
